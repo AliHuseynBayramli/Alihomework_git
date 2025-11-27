@@ -1,5 +1,5 @@
 let name="Alihuseyn";
-let surname="bayramli";
+let surname="Bayramli";
 let fullName=name+" "+surname;
 console.log(fullName.split(" ")[0][0],fullName.split(" ")[1][0])
 
