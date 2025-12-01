@@ -1,11 +1,18 @@
-let name="Alihuseyn";
-let surname="Bayramli";
-let fullName=name+" "+surname;
-console.log(fullName.split(" ")[0][0],fullName.split(" ")[1][0])
+//first
+let str1 = prompt("write a line:");
+console.log("lenght of the line: " + str1.length);
+//second
+let str2 = prompt("write second line and i coubt e:");
+console.log(str2.includes("e"));
+//tird
+let str3 = prompt("write tird line and ill tel u is there word code in start:");
+console.log(str3.startsWith("code"));
+//fourth
+let str4 = prompt("write fourth line and ill tel u is there word code at the end:");
+console.log(str4.endsWith("code"));
+//fiveth
+let str = prompt("write last line");
+let result = str.replaceAll("t", "####*");
+console.log(result);
 
-let name1= prompt("Write your name");
-let surname1=prompt("Write your surname");
-let fullName1=name1+" "+surname1;
-let split_name=fullName1.split(" ")
 
-console.log(split_name[1],split_name[0])
