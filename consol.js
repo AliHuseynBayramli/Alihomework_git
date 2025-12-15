@@ -1,16 +1,35 @@
-function rubl_dollar(dollar){
-   let u = dollar * 75;
-   return u;
+function checkNumber(value) {
+    if (value.length === 11 && value[0] === "+" && value[1] === "7") {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(checkNumber("+7123456789"))
 
+
+// second task 
+let input = prompt("write a 5 word line");
+
+let words = input.split(" ");
+let result = [];
+
+for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    let capitalized = word[0].toUpperCase() + word.slice(1);
+    result.push(capitalized);
 }
 
+console.log(result.join(" "));
 
+//tird task
+function countLetters(text) {
+    let cleanedText = text.replace(/[^a-zA-Z]/g, "");
+    return (cleanedText.length);
+}
 
-let rubl = 100;
-let dollar = 50;
-let ru_dol = rubl_dollar(dollar) ;
-console.log("yor rubl wolet has " + rubl)
-console.log("yor dollar wolet has "+ dollar)
-console.log("your bank akkaunt has "+ ru_dol+rubl+ " rubls")
+let text ="lnim eos dicta assumenda."
+console.log(countLetters(text));
+
 
 
