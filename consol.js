@@ -1,9 +1,21 @@
 function checkNumber(value) {
-    if (value.length === 11 && value[0] === "+" && value[1] === "7") {
-        return true;
-    } else {
+    if (value[0] !== "+") {
         return false;
     }
+
+    let digits = value.slice(1);
+
+    if (digits.length !== 11) {
+        return false;
+    }
+
+    if (isNaN(digits)) {
+        return false;
+    }
+
+    return true;
+
+
 }
 console.log(checkNumber("+7123456789"))
 
