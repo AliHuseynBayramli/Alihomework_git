@@ -2,11 +2,11 @@ function a() {
 
 //second one
     let sum = 0;
-    let i = 10;
+    let i = 11;
 
     while (i <= 99) {
         sum += i;
-        i++;
+        i=i+2;
     }
     console.log("sum of all 2digit nummbers ", sum);
 
