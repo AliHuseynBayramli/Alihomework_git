@@ -1,47 +1,25 @@
-function checkNumber(value) {
-    if (value[0] !== "+") {
-        return false;
+function a() {
+
+//second one
+    let sum = 0;
+    let i = 10;
+
+    while (i <= 99) {
+        sum += i;
+        i++;
     }
+    console.log("sum of all 2digit nummbers ", sum);
 
-    let digits = value.slice(1);
+//first one
+   let j = 100;
 
-    if (digits.length !== 11) {
-        return false;
+    console.log("Three-digit numbers ending with 0:");
+    while (j <= 999) {
+        if (j % 10 === 0) {
+            console.log(j);
+        }
+        j++;
     }
-
-    if (isNaN(digits)) {
-        return false;
-    }
-
-    return true;
-
-
-}
-console.log(checkNumber("+7123456789"))
-
-
-// second task 
-let input = prompt("write a 5 word line");
-
-let words = input.split(" ");
-let result = [];
-
-for (let i = 0; i < words.length; i++) {
-    let word = words[i];
-    let capitalized = word[0].toUpperCase() + word.slice(1);
-    result.push(capitalized);
 }
 
-console.log(result.join(" "));
-
-//tird task
-function countLetters(text) {
-    let cleanedText = text.replace(/[^a-zA-Z]/g, "");
-    return (cleanedText.length);
-}
-
-let text ="lnim eos dicta assumenda."
-console.log(countLetters(text));
-
-
-
+a()
