@@ -1,25 +1,8 @@
-function a() {
-
-//second one
-    let sum = 0;
-    let i = 11;
-
-    while (i <= 99) {
-        sum += i;
-        i=i+2;
-    }
-    console.log("sum of all 2digit nummbers ", sum);
-
-//first one
-   let j = 100;
-
-    console.log("Three-digit numbers ending with 0:");
-    while (j <= 999) {
-        if (j % 10 === 0) {
-            console.log(j);
-        }
-        j++;
-    }
+//first task
+let text = prompt("write an text");
+for(let i=0;i<text.length;i++){
+   if(text[i]>="0" && text[i]<="9"){
+      console.log("text has number");
+      break;
+   }
 }
-
-a()
