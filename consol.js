@@ -3,9 +3,9 @@ let newArr = [];
 
 for (let i = 0; i < arrr.length; i++) {
   if (arrr[i] > 5) {
-    newArr.unshift(arrr[i]);
+    newArr.unshift(arr[i]);
   } else {
-    newArr.push(arrr[i]);
+    newArr.push(arr[i]);
   }
 }
 
