@@ -1,12 +1,7 @@
-let arr = [7, 3, 8, 9, 2, 12];
-let newArr = [];
+let arr = [1, 2, 3, 4, 5];
 
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] > 5) {
-    newArr.unshift(arr[i]);
-  } else {
-    newArr.push(arr[i]);
-  }
-}
+let arrCopy = arr.map(num => num * 2);
 
-console.log(newArr);
+
+console.log(arrCopy);
+
