@@ -1,22 +1,23 @@
-let arr = [1, 4, 7, 8, 11, 20, 3];
-let sum = 0;
-arr.forEach(num => {
-  if (num % 2 !== 0) {
-    sum += num;
+let User = {
+  name: "John",
+  age: 30,
+
+  setAge(newAge) {
+    this.age = newAge;
+  },
+
+  yearsToRetirement() {
+    if (this.age < 65) {
+      return `Years left until retirement: ${65 - this.age}`;
+    } else if (this.age === 65) {
+      return "The user will receive retirement this year.";
+    } else {
+      return "The user is already retired.";
+    }
   }
-});
-console.log(sum); 
+};
 
 
-//second task 
-
-let words = ["js", "front", "html", "css"];
-
-let reversedWords = words.map(word =>
-  word.split("").reverse().join("")
-);
-
-console.log(reversedWords);
-
-
+User.setAge(40);
+console.log(User.yearsToRetirement());
 
