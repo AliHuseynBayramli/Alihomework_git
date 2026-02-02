@@ -1,24 +1,25 @@
-// first
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    console.log("Enter");
-  }
-});
-// second
-document.getElementById("btn").addEventListener("click", function () {
-  const name = document.getElementById("username").value;
-  const comment = document.getElementById("comment").value;
+const images = [
+  "img1.jpg",
+  "img2.jpg",
+  "img3.jpg",
+  "img4.jpg"
+];
 
-  console.log("Имя пользователя:", name);
-  console.log("Комментарий:", comment);
-});
-// third
-document.getElementById("loginBtn").addEventListener("click", function () {
-  const password = document.getElementById("password").value;
+let index = 0;
+const slide = document.getElementById("slide");
 
-  if (password.length > 5) {
-    console.log("login successful");
-  } else {
-    console.log("login failed");
+document.getElementById("next").onclick = () => {
+  index++;
+  if (index === images.length) {
+    index = 0;
   }
-});
+  slide.src = images[index];
+};
+
+document.getElementById("prev").onclick = () => {
+  index--;
+  if (index < 0) {
+    index = images.length - 1;
+  }
+  slide.src = images[index];
+};

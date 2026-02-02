@@ -1,17 +1,24 @@
-.defolt{
-    background-color: gray;
-    color: white;
-    border-radius: 10px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+body {
+  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-ul{
-    margin: 20px;
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-li{
-    margin-bottom: 10px;
+
+.slider img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
 }
-.active{
-    background-color: blue;
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
 }
