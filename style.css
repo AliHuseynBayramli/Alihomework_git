@@ -1,24 +1,17 @@
-body {
-  margin: 0;
-  margin-top: 20px;
+.gallery {
+  margin-top: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 15px;
 }
 
-.slider {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.slider img {
-  width: 400px;
-  height: 600px;
+.photo {
+  width: 300px;
+  height: 200px;
   object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-button {
-  padding: 10px 15px;
-  cursor: pointer;
+.photo.active {
+  transform: scale(1.4);
 }

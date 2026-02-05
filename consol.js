@@ -1,25 +1,10 @@
-const images = [
-  "img1.jpg",
-  "img2.jpg",
-  "img3.jpg",
-  "img4.jpg"
-];
+const photos = document.querySelectorAll(".photo");
 
-let index = 0;
-const slide = document.getElementById("slide");
-
-document.getElementById("next").onclick = () => {
-  index++;
-  if (index === images.length) {
-    index = 0;
-  }
-  slide.src = images[index];
-};
-
-document.getElementById("prev").onclick = () => {
-  index--;
-  if (index < 0) {
-    index = images.length - 1;
-  }
-  slide.src = images[index];
-};
+photos.forEach(photo => {
+  photo.addEventListener("click", () => {
+    // убираем увеличение у всех
+    photos.forEach(p => p.classList.remove("active"));
+    // увеличиваем только нажатую
+    photo.classList.add("active");
+  });
+});
